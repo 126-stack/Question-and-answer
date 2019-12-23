@@ -1,0 +1,40 @@
+<h3>{{viewTitle}}</h3>
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+        <script>https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js</script>
+
+
+<form action="/" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{question._id}}">
+    <div class="form-group">
+        <label>Question</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Question" value="{{question.fullName}}">
+        <label>Answer</label>
+        <input type="text" class="form-control" name="shortName" placeholder="Answer" value="{{question.answerName}}">
+
+    </div>
+
+    <div class="form-group">
+        <button type="submit"  id ="submit"class="btn btn-info" onclick="myFunction(this, 'red')"><i class="fa fa-database"></i> Submit</button>
+
+
+        <script>
+        function myFunction(elmnt,clr) {
+          elmnt.style.color = clr;
+        
+
+        }
+        </script>
+
+
+
+
+
+
+
+        <a class="btn btn-secondary" href="list" onclick="myFunction(this, 'red')"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
+<script>
